@@ -5,6 +5,8 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import Home from './components/Home.vue';
 import Login from './components/Login.vue';
+import Music from './components/Music.vue';
+import List from './components/List.vue';
 
 Vue.use(VueRouter);
 var router = new VueRouter();
@@ -17,7 +19,11 @@ router.addRoutes([
   {name:'home',path:'/home',component:Home,
   children:[
     {name:'login',path:'login',component:Login},
-    {name}
+    {name:'music',path:'music',component:Music,
+    children:[
+      {name:'music.list',path:'list',component:List}
+    ]
+  }
   ]}
 
 
