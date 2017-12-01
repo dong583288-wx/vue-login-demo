@@ -31,10 +31,13 @@ export default {
         success: () => {
           window.localStorage.setItem("username", this.username);
           if (confirm("去音乐列表页吗")) {
-            // location.href = {name:"music.list"};
+            // location.href = {name:"music.list"};//不行
             location.href = "#/home/music/list";
-            // location.href = "/home/music";
-            
+
+            // TODO: 这里
+            // this.$router.push({
+            //   name:'music.list'
+            // })
           }
           return;
         }

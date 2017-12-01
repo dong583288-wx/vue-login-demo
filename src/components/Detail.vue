@@ -19,7 +19,7 @@ export default {
   },
   created(){
     // 根据
-      console.log(this.$route,"this.$route")
+    console.log(this.$route,"this.$route")
 
     console.log(this.$router,"this.$router");
     // 查找元素

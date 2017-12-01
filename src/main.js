@@ -89,11 +89,11 @@ router.beforeEach((to,from,next)=>{
     
   }
   // 不需要进行登陆 验证 直接放行
-  if (checkLogin){
+  if (flag){
     return next()
   }
   // 从localStorage中获取 当前用户的登录信息
-  var username = window.localStorage.getItem("username");\
+  var username = window.localStorage.getItem("username");
 
   // 发起ajax请求 校验当前用户名是否可以登陆
   $.ajax({
